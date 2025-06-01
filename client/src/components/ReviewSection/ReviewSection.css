@@ -1,0 +1,115 @@
+/*  Background with Gradient */
+.testimonials-section {
+  position: relative;
+  background: linear-gradient(to bottom, #8e44ad, #5e3370);
+  padding: 100px 10px;
+  text-align: center;
+  overflow: hidden;
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+}
+
+/*  Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/*  Testimonial Slider */
+.testimonial-slider {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  perspective: 1000px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/*  Individual Testimonial Card */
+.testimonial-card {
+  width: 250px;
+  height: 300px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  cursor: pointer;
+}
+
+.testimonial-card.active {
+  transform: scale(1.05);
+}
+
+/*  Flip Effect */
+.testimonial-card:hover {
+  transform: rotateY(180deg);
+}
+
+/*  Front Side */
+.testimonial-front,
+.testimonial-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.testimonial-front {
+  background: white;
+}
+
+.testimonial-back {
+  background: #5e3370;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/*  Profile Image */
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #8e44ad;
+}
+
+/*  Star Ratings */
+.stars {
+  font-size: 1.5rem;
+  color: #f39c12;
+  margin-top: 5px;
+}
+
+/*  Responsive Adjustments */
+@media (max-width: 768px) {
+  .testimonial-slider {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    width: 90%;
+    height: 300px;
+  }
+}

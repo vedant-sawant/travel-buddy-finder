@@ -1,0 +1,467 @@
+/* Container for the message section */
+.message-section-container {
+  width: 100%;
+  margin: auto;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.15); /* Glassmorphism Effect */
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+/* User Profile Section */
+.selected-user-profile-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.3s ease-in-out;
+}
+
+.selected-user-profile-section:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Profile Picture */
+.selected-user-profile {
+  text-transform: capitalize;
+
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 12px;
+  box-shadow: 0px 4px 12px rgba(255, 152, 0, 0.5);
+}
+
+/* Username */
+.selected-user-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-transform: capitalize;
+}
+
+/* Clicked User Profile */
+.clicked-user-profile,
+.clicked-user-profile-dissable {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide when not active */
+.clicked-user-profile-dissable {
+  display: none;
+}
+
+/* Request Button */
+.request-container {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.request-content .btn {
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.request-content .btn:hover {
+  background: linear-gradient(135deg, #388e3c, #2e7d32);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.request-content p {
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  color: #212121;
+}
+
+/* Message Container */
+.message-container {
+  height: 350px;
+  overflow-y: auto;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.05);
+  scrollbar-width: thin;
+  scrollbar-color: #ff9800 #f1f1f1;
+}
+
+/* Custom Scrollbar */
+.message-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.message-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+  background: #ff9800;
+  border-radius: 8px;
+}
+
+.message-container::-webkit-scrollbar-thumb:hover {
+  background: #ff5722;
+}
+
+/* Message Input Section */
+.message-input-section {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.message-input-section input {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .message-section-container {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .selected-user-profile {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .selected-user-name {
+    font-size: 16px;
+  }
+
+  .message-container {
+    height: 280px;
+  }
+
+  .message-input-section input {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .selected-user-profile {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .selected-user-name {
+    font-size: 14px;
+  }
+
+  .message-container {
+    height: 250px;
+  }
+
+  .message-input-section input {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* Container for the message section */
+.message-section-container {
+  width: 100%;
+  margin: auto;
+  max-width: 650px;
+  background: rgba(151, 178, 253, 0.48); /* Soft Silk Effect */
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* User Profile Section */
+.selected-user-profile-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease-in-out;
+  border-radius: 12px 12px 0 0;
+}
+
+.selected-user-profile-section:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Profile Picture */
+.selected-user-profile {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8c52ff, #5c3df0);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 14px;
+  box-shadow: 0px 5px 15px rgba(140, 82, 255, 0.5);
+}
+
+/* Username */
+.selected-user-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+/* Message Container */
+.message-container {
+  height: 380px;
+  overflow-y: auto;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  box-shadow: inset 0px 3px 15px rgba(0, 0, 0, 0.1);
+  scrollbar-width: thin;
+  scrollbar-color: #6b78f8 #dfe3fa;
+}
+
+/* Custom Scrollbar */
+.message-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.message-container::-webkit-scrollbar-track {
+  background: #dfe3fa;
+  border-radius: 12px;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+  background: #6b78f8;
+  border-radius: 12px;
+}
+
+.message-container::-webkit-scrollbar-thumb:hover {
+  background: #5c3df0;
+}
+
+/* Sent messages (Right-aligned, gradient silk style) */
+.msg-send {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #6b78f8, #3c4ae7);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 20px 20px 8px 20px;
+  max-width: 65%;
+  word-wrap: break-word;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  transition: transform 0.2s ease;
+}
+
+/* Sent message tail */
+.msg-send::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  bottom: 0;
+  width: 14px;
+  height: 14px;
+  background: inherit;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* Hover effect on sent messages */
+.msg-send:hover {
+  transform: scale(1.05);
+}
+
+/* Received messages (Left-aligned, soft glassmorphism style) */
+.msg-receive {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  color: #333;
+  padding: 14px 20px;
+  border-radius: 20px 20px 20px 8px;
+  max-width: 65%;
+  word-wrap: break-word;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  transition: transform 0.2s ease;
+}
+
+/* Received message tail */
+.msg-receive::after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  bottom: 0;
+  width: 14px;
+  height: 14px;
+  background: inherit;
+  clip-path: polygon(0 100%, 0 0, 100% 100%);
+}
+
+/* Hover effect on received messages */
+.msg-receive:hover {
+  transform: scale(1.05);
+}
+
+/* Typing animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Message Input Section */
+.message-input-section {
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+}
+
+.message-input-section input {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Send Button */
+.send-button {
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.send-button:hover {
+  background: linear-gradient(135deg, #388e3c, #2e7d32);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .message-section-container {
+    max-width: 95%;
+    padding: 18px;
+  }
+
+  .selected-user-profile {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .selected-user-name {
+    font-size: 18px;
+  }
+
+  .message-container {
+    height: 320px;
+  }
+
+  .message-input-section input {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .selected-user-profile {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .selected-user-name {
+    font-size: 16px;
+  }
+
+  .message-container {
+    height: 280px;
+  }
+
+  .message-input-section input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .send-button {
+    padding: 10px 15px;
+  }
+}

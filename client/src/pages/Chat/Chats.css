@@ -1,0 +1,9 @@
+.user-chat-container {
+  min-height: 150vh;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 8px slategray;
+  margin: auto;
+  margin-top: 62px;
+
+  position: relative;
+}

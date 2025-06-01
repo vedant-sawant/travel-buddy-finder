@@ -1,0 +1,101 @@
+.contact {
+  background: linear-gradient(135deg, #ffffff, #f7f9fc);
+  padding: 50px 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.contact .contact-container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact .contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.contact .contact-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.contact .contact-info p {
+  font-size: 14px;
+  color: #444;
+}
+
+.contact .contact-form h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact .contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+  max-width: 100%;
+  min-width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact .contact-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact .contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact .contact-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact h2 {
+    font-size: 24px;
+  }
+
+  .contact .contact-form input,
+  .contact .contact-form textarea {
+    font-size: 13px;
+  }
+}

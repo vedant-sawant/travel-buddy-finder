@@ -1,0 +1,185 @@
+/* Destination Page Container */
+.predefine-places-container {
+  padding: 40px 5%;
+  text-align: center;
+  background: #f7f7f7; /*rgba(0, 102, 255, 0.326)*/
+  backdrop-filter: blur(10);
+}
+
+/* Category Filter Buttons */
+.predefine-places-container .category-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.predefine-places-container .filter-btn {
+  background: #cbc8c8;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.predefine-places-container .filter-btn:hover,
+.predefine-places-container .filter-btn.active {
+  background: white;
+  transform: scale(1.02);
+  border: 1px solid black;
+}
+
+/* Destination Grid */
+.predefine-places-container .predefine-destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Destination Card */
+.predefine-places-container .predefine-destination-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.predefine-places-container .predefine-destination-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Destination Image */
+.predefine-places-container .destination-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Destination Info */
+.predefine-places-container .destination-information {
+  padding: 15px;
+}
+
+.predefine-places-container .destination-information h3 {
+  margin: 0; /* Removes default margin to maintain uniform spacing */
+  font-size: 1.2rem; /* Sets the font size slightly larger than normal text */
+  font-weight: bold; /* Makes the heading bold for prominence */
+  color: #333; /* Sets a dark color to enhance readability */
+  text-transform: capitalize; /* Capitalizes the first letter of each word */
+  line-height: 1.4; /* Adds line height for better readability */
+  padding-bottom: 5px; /* Adds some padding at the bottom for spacing */
+}
+
+.predefine-places-container .category {
+  font-size: 0.9rem; /* Sets the font size slightly smaller than normal text */
+  color: #7a7a7a; /* Lighter gray color for the category text */
+  font-weight: 500; /* Medium font weight for subtle emphasis */
+  margin: 5px 0; /* Adds 5px margin at top and bottom for spacing */
+  text-transform: uppercase; /* Converts text to uppercase for consistency */
+  letter-spacing: 0.5px; /* Slightly increases letter spacing for a cleaner look */
+}
+
+.predefine-places-container .country-city {
+  font-size: 16px; /* Sets the font size for better visibility */
+  color: #333333; /* Dark gray color for the text */
+  font-weight: bold; /* Makes the text bold */
+  margin-top: 4px; /* Adds a small margin at the top */
+  margin-bottom: 8px; /* Adds space below the text */
+  text-transform: capitalize; /* Capitalizes the first letter of each word */
+}
+
+.predefine-places-container .short-description {
+  font-size: 14px; /* Adjusts the font size */
+  color: #555555; /* Sets the text color to a softer gray */
+  margin-top: 8px; /* Adds space above the description */
+  line-height: 1.5; /* Increases line height for better readability */
+  text-align: justify; /* Aligns the text to both the left and right edges */
+  padding: 0 10px; /* Adds horizontal padding for better spacing */
+  max-height: 80px; /* Limits the height of the description */
+  overflow: hidden; /* Hides the overflowed text */
+  text-overflow: ellipsis; /* Adds an ellipsis (...) if the text overflows */
+}
+
+/* View More Button */
+.predefine-places-container .view-more-btn {
+  background: #207cf3;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.predefine-places-container .view-more-btn:hover {
+  background: #008ff7;
+}
+
+/* Style for Load More Button */
+.predefine-places-container .load-more-btn {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 200px;
+  margin: 20px auto;
+}
+
+.predefine-places-container .load-more-btn:hover {
+  background-color: #0056b3;
+}
+
+.predefine-places-container .load-more-btn:disabled {
+  background-color: #02274e;
+  cursor: not-allowed;
+}
+
+/* Spinner inside the button while loading */
+.predefine-places-container .load-more-btn.loaing-circle-animation {
+  padding-left: 30px; /* Add padding to the left side to make room for the spinner */
+  cursor: progress;
+}
+
+.predefine-places-container .load-more-btn.loaing-circle-animation::before {
+  content: "";
+  position: absolute;
+  left: 16px; /* Position the spinner inside the button */
+  top: 12%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 4px solid transparent;
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* Add spin animation */
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .predefine-places-container .category-filters {
+    flex-direction: column;
+  }
+}

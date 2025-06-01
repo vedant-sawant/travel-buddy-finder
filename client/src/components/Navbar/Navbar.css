@@ -1,0 +1,90 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
+  background: rgba(0, 0, 0);
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: 0.3s ease-in-out;
+}
+
+/* Logo */
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  color: #00aefd;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  padding: 8px 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: #00aefd;
+  border-bottom: 2px solid #00aefd;
+}
+
+/* Register button */
+.register a {
+  background: #ff4500;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.register a:hover {
+  background-color: white;
+}
+
+/* Menu icon for mobile */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-links.open {
+    left: 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

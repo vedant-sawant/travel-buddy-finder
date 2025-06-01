@@ -1,0 +1,125 @@
+.user-feedback-container h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.user-feedback-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+  font-family: "Arial", sans-serif;
+}
+
+.user-feedback-container .user-feedback-input-section {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.user-feedback-container .feedback-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.user-feedback-container .submit-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-feedback-container .submit-btn:hover {
+  background-color: #218838;
+}
+
+.user-feedback-container .user-feedback {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.user-feedback-container .feedback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-feedback-container .feedback-item {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-feedback-container .feedback-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-feedback-container .user-email {
+  font-size: 0.875rem;
+  color: #777;
+}
+.user-feedback-container .feedback-content {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .user-feedback-container {
+    padding: 15px;
+  }
+
+  .user-feedback-container .feedback-input {
+    max-width: 100%;
+  }
+
+  .user-feedback-container .submit-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .user-feedback-container .feedback-item {
+    font-size: 0.9rem;
+  }
+
+  .user-feedback-container .feedback-content {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-feedback-container .user-feedback-input-section {
+    padding: 15px;
+  }
+
+  .user-feedback-container .submit-btn {
+    width: 100%;
+  }
+}
